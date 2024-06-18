@@ -7,6 +7,9 @@
 </head>
 <body>
     <h1>My name is <span id="id1"></span>.I come from <span id="id2"></span>.</h1>
+    <h1>My age is <span id="id3"></span></h1>
+    <h1>My father's age is <span id="id4"></span>.He is <span id="id5"></span>yrs older than me</h1>
+    <h1>Price of one mango= <span id="id6"></span>.Price of ten mangoes=<span id="id7"></span></h1>
     <!-- <p id="we">1111</p> -->
     <!-- <p id="ch">798798759</p>
     <h1 id="unique">KBA</h1> 
@@ -129,11 +132,22 @@
         document.write(x<=y,"<br>")
         document.write(x!=y,"<br><br>")
 
-        let name,place;
+        let name,place,age,age1,age2,price,price1;
         name="Unnikrishnan M S"
         place="Thiruvanathapuram"
+        age=27
+        age1=63
+        age2=age1-age
+        price=22
+        price1=10*price
         document.getElementById("id1").innerHTML=name
         document.getElementById("id2").innerHTML=place
+        document.getElementById("id3").innerHTML=age
+        document.getElementById("id4").innerHTML=age1
+        document.getElementById("id5").innerHTML=age2
+        document.getElementById("id6").innerHTML=price
+        document.getElementById("id7").innerHTML=price1
+        
 
     </script>
 </body>
