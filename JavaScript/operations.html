@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operations</title>
+</head>
+<body>
+    <h1>First name is <span id="fname"></span></h1>
+    <h1>Last name is <span id="lname"></span></h1>
+    <h1>Full name is <span id="funame"></span></h1>
+    <h1>My age is <span id="age"></span>. My brother is <span id="age1"></span>yrs older than me. My brother is <span id="age2"></span></h1>
+    <script>
+        let a
+        a=365
+        let b
+        b=4
+        let c
+        c=a+b
+        //document.write(`data type of c is ${typeof(c)}`)
+        let fname,lname
+        fname="UNNIKRISHNAN"
+        lname=" M S"
+        fullname=fname+lname
+        document.getElementById("fname").innerHTML=fname
+        document.getElementById("lname").innerHTML=lname
+        document.getElementById("funame").innerHTML=fullname
+        
+        // let x,y,z,p
+        // x=10,y=20,z="years",p=x+y+z
+        // document.write(p,"<br>")
+        // document.write(`the data type of p is ${typeof(p)}`)
+
+
+        let age,age1,age2
+        age=27,age1=5,age2=age+age1
+        document.getElementById("age").innerHTML=age
+        document.getElementById("age1").innerHTML=age1
+        document.getElementById("age2").innerHTML=age2
+
+        let w
+        document.write(typeof(w)+"<br>")
+        w=null
+        document.write(typeof(w)+"<br>")
+
+        let h=true
+        document.write(typeof(h)+"<br>")
+
+        let j,k,l
+        j=67,k="67",l=k===j    //
+        document.write(l+"<br>")
+
+        let m
+        m=BigInt("12345678910111213141516171819202122232425262728293031323334353637383940")
+        document.write(m+"<br>"+typeof(m)+"<br>")
+
+        const o=5 
+        const q=2
+        let r,s,t,u,v
+        r=10,s=3,t=1,u=6,v=4
+        document.write((o*q)/q+"<br>")
+        document.write(r*q+s-t+"<br>")
+        document.write((o*u)%v+"<br>")
+
+
+
+    </script>
+</body>
+</html>

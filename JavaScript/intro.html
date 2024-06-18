@@ -6,7 +6,9 @@
     <title>Document</title>
 </head>
 <body>
+    <h1 id="dem1"></h1>
     <p id="demo"></p>
+    <h1 id="dem2"></h1>
     <script>
         //alert(5+5);
         //console.log("Helloooo....");
@@ -14,7 +16,34 @@
         //console.log(5*10);
         //console.log((26*3)+4);
        //console.log(56/5);
-       document.getElementById("demo").innerHTML="Hello EveryOne"
+    //    document.getElementById("demo").innerHTML="Hello EveryOne"
+    //    let x
+    //    x=10                    // JS doesn't allow you to redeclare variable
+    //    document.write(x)
+    //    let
+    //    x=15
+    //    document.write(x)  
+    //    const a=23                    // JS doesn't allow you to redeclare variable
+    //    document.write(x)
+    //    const a=23                    
+    //    document.write(x)
+    let x
+    x=300
+    let a
+    a=34
+    {   let x=500
+        document.getElementById("demo").innerHTML=`Value of x is inside subsection ${x}`
+        let a                               
+        a=100
+        document.write(a)
+    }
+    document.write("<br>",a)
+
+    document.getElementById("dem1").innerHTML=`Value of x is ${x}`
+    document.getElementById("dem2").innerHTML=`Again Value of x is ${x}`
+
+    
+    
     </script>
 </body>
 </html>
