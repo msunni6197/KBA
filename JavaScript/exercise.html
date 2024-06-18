@@ -89,6 +89,9 @@
         // document.write("<br>* **")
         // document.write("<br>** *<br>")
 
+    
+
+
 
 
         let x,y;
@@ -147,7 +150,19 @@
         document.getElementById("id5").innerHTML=age2
         document.getElementById("id6").innerHTML=price
         document.getElementById("id7").innerHTML=price1
-        
+
+        let num1,num2
+        num1=2345678123456789012345123456789
+        num2=1234567890123456789012345678899
+        document.write(num1+num2,"<br>")
+
+        num1=BigInt("2345678123456789012345123456789")
+        num2=BigInt("1234567890123456789012345678899")
+        document.write(num1+num2,"<br>")
+
+        num1=2345678123456789012345123456789 
+        num2=BigInt("1234567890123456789012345678899")
+        document.write(num1+num2,"<br>")
 
     </script>
 </body>
