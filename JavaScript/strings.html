@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>My sentence is <span id="id1"></span></p>
+    <p>Length of my sentence <span id="id2"></span></p>
+    <p>The human Character is <span id="id3"></span></p>
+    <p>The name of the book is <span id="id4"></span></p>
+    <p>My sentence in uppercase <span id="id5"></span></p>
+    <script>
+        let x="hello there.."
+        let y="Rambo"
+        let z="The delusional god"
+        // document.write("length of the string is ",x.length +"<br>")
+        // document.write("character at index number zero(0) is ",x.charAt(0)+"<br>")
+        // document.write(x.toUpperCase()+"<br>")
+        // document.write(x.substring(0,4)+"<br>")
+        // document.write(x.substring(5)+"<br>")
+        // document.write(x.substr(0,4)) //(index no.,no of characters)
+        document.getElementById("id1").innerHTML=x
+        document.getElementById("id2").innerHTML=x.length
+        document.getElementById("id3").innerHTML=y
+        document.getElementById("id4").innerHTML=z
+        document.getElementById("id5").innerHTML=x.toUpperCase()
+        //to familiarize : repeat,concat,slice,split
+    </script>
+</body>
+</html>
