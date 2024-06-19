@@ -6,11 +6,20 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="id7">
+        <h1>
+            Hello World..
+        </h1>
+    </div>
+    <div id="id8">
+        <h2>Hei</h2>
+    </div>
     <p>My sentence is <span id="id1"></span></p>
     <p>Length of my sentence <span id="id2"></span></p>
     <p>The human Character is <span id="id3"></span></p>
     <p>The name of the book is <span id="id4"></span></p>
     <p>My sentence in uppercase <span id="id5"></span></p>
+    <p><span id="id6"></span> is a good book</p>
     <script>
         let x="hello there.."
         let y="Rambo"
@@ -26,7 +35,20 @@
         document.getElementById("id3").innerHTML=y
         document.getElementById("id4").innerHTML=z
         document.getElementById("id5").innerHTML=x.toUpperCase()
-        //to familiarize : repeat,concat,slice,split
+        //to familiarize : repeat,concat,slice,split(activity)
+        document.getElementById("id6").textContent=z
+
+        //procedure for creating a new tag inside a desired arae/portion 
+        let element=document.createElement("p")
+        element.innerHTML="Welcome to the world of JS"
+        document.getElementById("id7").appendChild(element)
+
+        let thing=document.createElement("input")
+        thing.placeholder="enter anything.."
+        document.getElementById("id8").appendChild(thing)
+
+        
+
     </script>
 </body>
 </html>

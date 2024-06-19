@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let k=1
+        // let l=k++
+        // document.write(l)
+        let k=2                 //In post increment case
+        let l=++k               //k is already incremented
+        document.write(l,"<br>")//So, the values we get after that are the same
+        document.write(k,"<br>")//ie.,k=l=3
+        
+        let a,b
+        a=10,b=5
+        document.write((a>b)||(a==b),"<br>")
+        document.write((a>b)&&(a==b),"<br>")
+
+        let t=true
+        let f=!t
+        document.write(f,"<br>")
+
+        if (a>b) {
+            document.write(`the largest number is a :${a}`,"<br>")
+        } else {
+            document.write(`the largest number is b :${b}`)
+        }
+
+        let x="Hello"
+        if (x=="unni") {
+            document.write(`${x} is equal to unni`)
+        } else {
+            document.write(`${x} is not equal to unni`,"<br>") 
+        }
+
+        if (a>b||a==b) {
+            document.write(`the largest number is a :${a}`,"<br>")
+        } else {
+            document.write(`the largest number is b :${b}`)
+        }
+
+    </script>
+</body>
+</html>
