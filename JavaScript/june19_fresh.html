@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My name is <span id="id1"></span>.I live in <span id="id2"></span></h1>
+    <div id="id2"></div>
+    <div id="id3"></div>
+    <script>
+    let p,r,t,s_i,c_i     //P-Principal,R-Rate of Interest,T-Time span,S_I-Simple interest,c_i-compound_interest
+        p=10000,r=8.3,t=4 
+        s_i=(p*r*t)/100
+         document.write(`simple interest for principal amount of ${p} at the rate of  ${r}% for a period of ${t}yrs is `,s_i+"<br>")
+        const pi=3.14
+        l=12,b=10,h=18,a=7,r=6,a=4,b=7,c=9
+        document.write(`area of a square having a side of ${a}cm is `,(a*a)+"cm^2<br>")
+        document.write(`perimeter of a square having a side of ${a}cm is `,4*a+"cm<br>")
+        document.write(`area of a rectangle having a length of ${12}cm and a breadth of ${b}cm is `,(l*b)+"cm^2<br>")
+        document.write(`perimeter of a rectangle having a length of ${12}cm and a breadth of ${b}cm is `,2*(l*b)+"cm<br>")
+        document.write(`area of a triangle having a height of ${h}cm and a breadth ${b}cm is `,0.5*(b*h)+"cm^2<br>")
+        document.write(`perimeter of a triangle having sides of ${a}cm,${b}cm and ${c}cm is `,a+b+c+"cm<br>")
+        document.write(`area of a circle having a radius of ${r}cm is `,pi*r*r+"cm^2<br>")
+        document.write(`perimeter of a circle having a radius of ${r}cm is `,2*pi*r+"cm<br>")
+
+        let num=5
+        cube=num*num*num
+        square=num*num
+        document.write(`cube of ${num} is `,cube+"<br>")
+        document.write(`square of ${num} is `,square+"<br>")
+
+        let tem=27
+        far=(tem*9/5) + 32
+        document.write(`the temperature, ${tem}C is equal to ${far}F `,"<br>")
+
+        let z,y,m
+        z=10,y=15
+        document.write(`before swapping ,z=${z},y=${y}`,"<br>")
+        m=z
+        z=y
+        y=m
+        document.write(`After swapping ,z=${z},y=${y}`,"<br>")
+
+        z=20,y=10
+        document.write(`before swapping w/o using tem.variable ,z=${z},y=${y}`,"<br>")
+        z=z+y
+        y=z-y
+        z=z-y
+        document.write(`After swapping w/o using tem.variable ,z=${z},y=${y}`,"<br>")
+
+        // let text2="MongoDB is a decentralised distributed ledger . MongoDB can eliminate centralisation."
+        // let text3=text.replace("MongoDB","Blockchain")
+        // document.write(text3)
+
+    document.write("Hello World"==="hEllO World","<br>")
+    document.write(typeof("Hello World"==="hEllO World"),"<br>")
+
+    let text="I like to play video games.I don’t like Hide & seek"
+    let text1=text.replace("like","don't like")
+    document.write(text1,"<br>")
+
+    let fname="unnikrishnan ",lname="m s",place="thiruvananthapuram"
+    document.getElementById("id1").innerHTML=(fname+lname).toUpperCase()
+    document.getElementById("id2").innerHTML=place.toUpperCase()
+
+    let text2="MongoDB is a decentralised distributed ledger. MongoDB can eliminate centralisation."
+    let text3=text2.replace(/MongoDB/g,"Blockchain")
+    document.write(text3,"<br>")
+    let text4=text2.substring(0,46)
+    document.write(text4,"<br>")
+
+    document.write((fname+lname).toUpperCase(),"<br>")
+
+    let text5="You can study anything if you have a will to do it"
+    let text6=text5.substring(0,13)
+    let text7=text5.substr(0,4)
+    let text8=text5.substr(37,4)
+    let text9=text5.substring(44)
+    let text10=text6+text7+text8+text9
+    document.write(text10,"<br>")
+
+    let text11="application.json"
+    let text12=text11.slice(0,11)
+    document.write(text12)
+
+    myself="Hello there! Iam passionate about programming and technology.My journey into the world of development began with the Kerala Blockchain Academy and the learning has been continuing.I hold a degree in Computer Science, where I gained the basics of programming and software development techniques.I look forward to colloborate with people who are in the industry.Let's share our thoughts and insights..and grow together.."
+    let ele=document.createElement("p")
+    ele.textContent=myself
+    document.getElementById("id2").appendChild(ele)
+    
+    let ele1=document.createElement("ul")
+    ele1.id="id4"
+    document.getElementById("id3").appendChild(ele1)
+    let ele2=document.createElement("li")
+    ele2.innerHTML="Manjummel Boys"
+    document.getElementById("id4").appendChild(ele2)
+    let ele3=document.createElement("li")
+    ele3.innerHTML="Premalu"
+    document.getElementById("id4").appendChild(ele3)
+    let ele4=document.createElement("li")
+    ele4.innerHTML="Aavesham"
+    document.getElementById("id4").appendChild(ele4)
+    </script>
+</body>
+</html>
