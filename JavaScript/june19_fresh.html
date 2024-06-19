@@ -9,6 +9,9 @@
     <h1>My name is <span id="id1"></span>.I live in <span id="id2"></span></h1>
     <div id="id2"></div>
     <div id="id3"></div>
+    <div id="id5"></div>
+    <div id="id7"></div>
+    <p id="cake"></p>
     <script>
     let p,r,t,s_i,c_i     //P-Principal,R-Rate of Interest,T-Time span,S_I-Simple interest,c_i-compound_interest
         p=10000,r=8.3,t=4 
@@ -102,6 +105,51 @@
     let ele4=document.createElement("li")
     ele4.innerHTML="Aavesham"
     document.getElementById("id4").appendChild(ele4)
+
+
+    let ele5=document.createElement("select")
+    ele5.id="id6"
+    document.getElementById("id5").appendChild(ele5)
+    let ele6=document.createElement("option")
+    ele6.innerHTML="pyhton"
+    document.getElementById("id6").appendChild(ele6)
+    let ele7=document.createElement("option")
+    ele7.innerHTML="JavaScript"
+    document.getElementById("id6").appendChild(ele7)
+    let ele8=document.createElement("option")
+    ele8.innerHTML="C++"
+    document.getElementById("id6").appendChild(ele8)
+    let ele9=document.createElement("option")
+    ele9.innerHTML="Java"
+    document.getElementById("id6").appendChild(ele9)
+
+
+
+    let ele10=document.createElement("select")
+    ele10.id="id8"
+    document.getElementById("id7").appendChild(ele10)
+    let ele11=document.createElement("option")
+    ele11.innerHTML="BlackForest"
+    document.getElementById("id8").appendChild(ele11)
+    let ele12=document.createElement("option")
+    ele12.innerHTML="WhiteForest"
+    ele12.value="WhiteForest"
+    ele12.id="cake1"
+    document.getElementById("id8").appendChild(ele12)
+    let ele13=document.createElement("option")
+    ele13.innerHTML="RedWelwet"
+    document.getElementById("id8").appendChild(ele13)
+
+    
+    let ele14=document.getElementById("cake1").value;
+    document.getElementById("cake").innerHTML=ele14
+    
+    
+
+
+
+
+
     </script>
 </body>
 </html>

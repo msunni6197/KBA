@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <h1>My name is <span id="id1"></span>.I live in <span id="id2"></span></h1>
+    <div id="id2"></div>
+    <div id="id3"></div>
+<body>
+    <script>
+    document.write("Hello World"==="hEllO World","<br>")
+    document.write(typeof("Hello World"==="hEllO World"),"<br>")
+
+    let text="I like to play video games.I don’t like Hide & seek"
+    let text1=text.replace("like","don't like")
+    document.write(text1,"<br>")
+
+    let fname="unnikrishnan ",lname="m s",place="thiruvananthapuram"
+    document.getElementById("id1").innerHTML=(fname+lname).toUpperCase()
+    document.getElementById("id2").innerHTML=place.toUpperCase()
+
+    let text2="MongoDB is a decentralised distributed ledger. MongoDB can eliminate centralisation."
+    let text3=text2.replace(/MongoDB/g,"Blockchain")
+    document.write(text3,"<br>")
+    let text4=text2.substring(0,46)
+    document.write(text4,"<br>")
+
+    document.write((fname+lname).toUpperCase(),"<br>")
+
+    let text5="You can study anything if you have a will to do it"
+    let text6=text5.substring(0,13)
+    let text7=text5.substr(0,4)
+    let text8=text5.substr(37,4)
+    let text9=text5.substring(44)
+    let text10=text6+text7+text8+text9
+    document.write(text10,"<br>")
+
+    let text11="application.json"
+    let text12=text11.slice(0,11)
+    document.write(text12)
+
+    myself="Hello there! Iam passionate about programming and technology.My journey into the world of development began with the Kerala Blockchain Academy and the learning has been continuing.I hold a degree in Computer Science, where I gained the basics of programming and software development techniques.I look forward to colloborate with people who are in the industry.Let's share our thoughts and insights..and grow together.."
+    let ele=document.createElement("p")
+    ele.textContent=myself
+    document.getElementById("id2").appendChild(ele)
+    
+    let ele1=document.createElement("ul")
+    ele1.id="id4"
+    document.getElementById("id3").appendChild(ele1)
+    let ele2=document.createElement("li")
+    ele2.innerHTML="Manjummel Boys"
+    document.getElementById("id4").appendChild(ele2)
+    let ele3=document.createElement("li")
+    ele3.innerHTML="Premalu"
+    document.getElementById("id4").appendChild(ele3)
+    let ele4=document.createElement("li")
+    ele4.innerHTML="Aavesham"
+    document.getElementById("id4").appendChild(ele4)
+    </script>
+</body>
+</html>
