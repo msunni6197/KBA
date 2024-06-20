@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let a=3654767
+        // if (a%2==1) {
+        //     document.write(`the given number ${a} is odd`)
+        // } else {
+        //     document.write(`the given number ${a} is even`)
+        // }
+        // let x
+        // x=5
+        // if (x==5) {
+        //     document.write("friday")
+        // } else if (x==4) {
+        //     document.write("Thursday")
+        // } else if (x==3) {
+        //     document.write("wednesday")
+        // } else if (x==2){
+        //     document.write("Tuesday")
+        // } else if (x==1){
+        //     document.write("Monday")
+        // } else if (x==6){
+        //     document.write("Saturday")
+        // } else if (x==7){
+        //     document.write("sunday")
+        // } else {
+        //     document.write("Nothing")
+        // }
+
+        let num1,num2,num3,num4
+        num1=3000,num2=10,num3=700,num4=10000
+        if(num1 > num2 && num1 > num3) {
+            document.write("num1 is the largest number"+"<br>")
+        } else if (num2 > num1 && num2 >num3) {
+            document.write("num2 is the largest number"+"<br>")
+        } else {
+            document.write("num3 is the largest number"+"<br>")
+        } 
+
+
+        if(num1 > num2 && num1 > num3 && num1 > num4) {
+            document.write("num1 is the largest number"+"<br>")
+        } else if (num2 > num1 && num2 >num3 && num2 > num4) {
+            document.write("num2 is the largest number"+"<br>")
+        } else if (num3 >num1 && num3 > num2 && num3 > num4) {
+            document.write("num3 is the largest number"+"<br>")
+        } else {
+            document.write("num4 is the largest number"+"<br>")
+        } 
+
+        let sum1=(num1>num3)?num1:num3
+        document.write("largest among two numbers is",sum1,"<br>")
+
+        let sum2=(num1>num3)?(num1>num2):num3>num2?document.write("num1 is the largest"):num3>num2
+        document.write("largest among two numbers is",sum,"<br>")
+
+
+        let sum,d,f
+        d=2,f=2
+        sum=d+f
+        switch (sum) {
+            case 1:
+                document.write("One")
+                break;
+            case 2:
+                document.write("Two")
+                break;
+            case 3:
+                document.write("Three")
+                break;
+            case 4:
+                document.write("Four"+"<br>")
+                break;
+            case 5:
+                document.write("Five")
+                break;
+            default:
+                document.write("Kalanjit Poda...")
+                break;
+        }
+
+
+
+
+
+    
+        switch ("") {
+            case "+":
+                document.write(num1+num2,"<br>")
+                break;
+            case "-":
+                document.write(num1-num2,"<br>")
+                break;
+            case "*":
+                document.write(num1*num2,"<br>")
+                break;
+            case "/":
+                document.write(num1/num2,"<br>")
+                break;
+            case "%":
+                document.write(num1%num2,"<br>")
+                break;
+            default:
+                document.write("Kalanjit Poda...")
+                break;
+        }
+
+    </script>
+</body>
+</html>
