@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Write a program to read first 10 numbers from the and find their sum and average.
+        for (let index = 1; index < 11; index++) {
+            document.write(index,"<br>"); 
+        }
+        let ave,sum
+        sum=0
+        for (let index = 1; index < 11; index++) {
+            sum=sum+index; 
+        }
+        document.write("sum is ",sum,"<br>")
+        document.write("average is ",sum/10,"<br>")
+
+
+        //Write a program to display the cube of the numbers from 10 to 25.
+        let cube=0
+        for (let index = 10; index < 26; index++) {
+            cube=index**3;
+            document.write(`cube of ${index} is ${cube}`,"<br>"); 
+        }
+
+        //Write a program to display the multiplication table for a given integer.
+        for (let index = 1; index < 11; index++) {
+            mul=index*5;
+            document.write(`${index}  * 5 = ${mul}`,"<br>"); 
+        }
+
+        //Program to reverse a number
+        
+
+    </script>
+</body>
+</html>

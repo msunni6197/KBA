@@ -16,8 +16,9 @@
     let p,r,t,s_i,c_i     //P-Principal,R-Rate of Interest,T-Time span,S_I-Simple interest,c_i-compound_interest
         p=10000,r=8.3,t=4 
         s_i=(p*r*t)/100
-         document.write(`simple interest for principal amount of ${p} at the rate of  ${r}% for a period of ${t}yrs is `,s_i+"<br>")
-        c_i=(p+(1+(r*t/100))**t)
+        document.write(`simple interest for principal amount of ${p} at the rate of  ${r}% for a period of ${t}yrs is `,s_i+"<br>")
+        c_i=(p*(1+(r/100))**t)
+        document.write(`compound interest for principal amount of ${p} at the rate of  ${r}% for a period of ${t}yrs is `,c_i+"<br>")
         
         
         
@@ -88,7 +89,7 @@
     let text10=text6+text7+text8+text9
     document.write(text10,"<br>")
 
-    let text11="application.json"
+    let text11="application.js"
     let text12=text11.slice(0,11)
     document.write(text12)
 
