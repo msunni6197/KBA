@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let k=10
+        document.write("hello there <br>hello there <br>hello there <br>hello there <br>hello there <br>")
+        for (let index = 0; index < k; index=index+2) {
+            document.write("KBA<br>");    
+        }
+        for (let index = 1; index < 11; index++) {
+            document.write(index,"<br>"); 
+            
+        }
+        let sum2=0
+        for (let index = 0; index < 11; index+=2) {
+            sum2=sum2+index;
+            document.write(index,"<br>");     
+        } 
+        document.write("Sum of the even numbers is ",sum2,"<br>")
+        for (let index = 1; index < 11; index+=2) {
+            document.write(index,"<br>");
+        }
+        let sum=0
+        for (let index = 1; index <11 ; index++) {
+            sum=sum+index;     
+        }
+        document.write("Sum of the first 10 numbers is ",sum,"<br>")
+
+
+        let fact=1
+        for (let index = 1; index <=5 ; index++) {
+            fact=fact*index;  
+        }
+        document.write("factorial of 5 is ",fact,"<br>")
+        
+        let fact1=1
+        for (let index = 6; index > 0; index--) {
+            fact1=fact1*index;
+        }
+        document.write(`factorial is `,fact1,"<br>")
+    </script>
+</body>
+</html>
