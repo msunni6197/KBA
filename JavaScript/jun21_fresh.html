@@ -34,14 +34,16 @@
         }
 
         //Program to reverse a number
-        let num,rev,rem
+        let num,rev,rem,p,n
         rev=0
-        num=6474
-        rem=num%10
-        num
+        num=259
         for (let index = 0; index ; index++) {
-            
+            rem=num%10;
+            p=num-rem;
+            n=p/10;
+            rev=rev*n+rem;
         }
+        document.write(rev)
         //Write a program to print these series
 
         10,20,30,40,50
