@@ -7,10 +7,10 @@
 </head>
 <body>
     <script>
-        let a=[1,2,3,4,5,60]
+        let a=[1,2,3,4,5,60],i
         document.write(a,"<br>")
         document.write(a[0],"<br>",a[1],"<br>",a[2],"<br>",a[3],"<br>",a[4],"<br>",a[5],"<br>",a[6],"<br>")
-        for (let i = 0; i<=5; i++) {
+        for ( i = 0; i<=5; i++) {
             document.write((a[i]),"<br>")    
         }
         let b=["unni","achu","anu","appu"]
@@ -18,6 +18,89 @@
             document.write(b[index],"<br>");
             
         }
+
+        let c=[]
+        // c[0]=1,c[1]=2,c[2]=3,c[3]=4,c[4]=5
+        // document.write(c[0],"<br>",c[1],"<br>",c[2],"<br>",c[3],"<br>",c[4],"<br>")
+        for (let index = 0 ; index < 5; index++) {
+            c[index]=index+1;
+            document.write(c[index],"<br>")   
+        }
+        for (let index = 0; index < 5; index++) {
+            c[index]=(index+1)*2;
+            document.write(c[index],"<br>")   
+        }
+        let d=2
+        for (let index = 0; index < 5; index++) {
+            c[index]=d;
+            d=d+2;
+            document.write(c[index],"<br>")   
+        }
+        document.write("the length of the array is ",c.length,"<br>")
+        let sum=0
+        for (let index = 0; index < c.length; index++) {
+            sum=sum+c[index];   
+        }
+        document.write("sum of the elements of the array is ",sum,"<br>")
+        sum=0
+        for (x in a){
+            sum=sum+a[x]
+        }
+        document.write("sum of the elements of the array is ",sum,"<br>")
+        for (x in a) {
+            a[x]=a[x]+2;
+            document.write(a[x],"<br>")
+        }
+        for (x in a){
+            if (x==3) {
+                a[x]=100;
+            }
+        }
+        document.write(a,"<br>")
+        a.push(24)
+        document.write(a,"<br>")
+        let str="JavaScript"
+        for (x in str){ 
+            document.write(str[x],"<br>")  
+        }
+        let str1=[]
+        for (x in str){
+            if (str[x]=="S") {
+                str1[x]="x"
+            } else {
+                str1[x]=str[x]
+            }
+        }
+        document.write(str1,"<br>")
+        let j;
+
+        for ( i = 0; i< 2; i++) {
+            for (j = 0; j < 3; j++) {
+                document.write("idiot")    
+            }
+            
+        }
+        for ( i = 0; i < 3; i++) {
+            document.write("<br>")
+            for( j=0;j<3;j++){
+                document.write("*")
+            }   
+        }
+
+        for ( i = 0; i < 3; i++) {
+            document.write("<br>")
+            for( j=0;j<=i;j++){
+                document.write("*")
+            }   
+        }
+
+        for ( i = 0; i < 3; i++) {
+            document.write("<br>")
+            for( j=0;j<=i;j++){
+                document.write(j+1)
+            }   
+        }
+
     </script>
 </body>
 </html>
