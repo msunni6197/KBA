@@ -19,31 +19,52 @@
         document.write("sum is ",sum,"<br>")
         document.write("average is ",sum/10,"<br>")
 
-
+        document.write("<hr>")
         //Write a program to display the cube of the numbers from 10 to 25.
         let cube=0
         for (let index = 10; index < 26; index++) {
             cube=index**3;
             document.write(`cube of ${index} is ${cube}`,"<br>"); 
         }
-
+        document.write("<hr>")
         //Write a program to display the multiplication table for a given integer.
         for (let index = 1; index < 11; index++) {
             mul=index*5;
             document.write(`${index}  * 5 = ${mul}`,"<br>"); 
         }
-
+        document.write("<hr>")
         //Program to reverse a number
-        let num,rev,rem,p,n
-        rev=0
-        num=259
-        for (let index = 0; index ; index++) {
-            rem=num%10;
-            p=num-rem;
-            n=p/10;
-            rev=rev*n+rem;
+        let rev,num;
+        rev=0;
+        num=87;
+        let num3=num
+        for (let index = 0; index<2; index++) {
+            rev=(rev*10)+(num%10);
+            num=num-(num%10);
+            num=num/10;
         }
-        document.write(rev)
+        document.write("reversed number: ",rev,"<br>")
+        document.write("<hr>")
+        document.write("<hr>")
+        //Write a program to check whether a number is a palindrome or not.
+        if (num3==rev) {
+            document.write("number is a palindrome<br>")
+        } else{
+            document.write("number is not a palindrome<br>")
+        }
+        document.write("<hr>")
+        //Write a program to print fibinocci series.
+        let num1=0,num2=1,num4;
+        document.write(num1,"<br>",num2,"<br>")
+        for(i=2;i<10;i++){
+            num4=num1+num2;
+            document.write(num4,"<br>");
+            num1=num2;
+            num2=num4;
+        }
+        document.write("<hr>")
+        
+        document.write("<hr>")
         //Write a program to print these series
 
         10,20,30,40,50
@@ -56,18 +77,23 @@
         for (let index = 10; index < 51; index+=10) {
             document.write(index,"<br>");    
         }
+        document.write("<hr>")
         for (let index = 25; index < 51; index+=5) {
             document.write(index,"<br>");    
         }
+        document.write("<hr>")
         for (let index = 5; index < 36;index+=5) {
             document.write(index,"<br>");    
         }
+        document.write("<hr>")
         for (let index = 8; index < 21;index+=2) {
             document.write(index,"<br>");
         }
+        document.write("<hr>")
         for (let index = 7; index < 21;index+=2) {
             document.write(index,"<br>");
         }
+        document.write("<hr>")
         let a=[10,100,1000,10000]
         for (let index = 0;index<4 ; index++) {
             document.write(a[index],"<br>")  
