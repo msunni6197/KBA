@@ -82,17 +82,61 @@
             j=1;
             sum1=sum1+e[i][j];  
         }
-        document.write("average marks= ",sum1/4),"<br>"
+        document.write("average marks= ",sum1/4,"<br>")
         document.write("<hr>")
         a=[5,67,5,45,6,7];
         for (let x of a) {
-            document.write(x)  ;  
+            document.write(x,"<br>")  ;  
         }
-        for(i=0;i<3;i++){
-            for (j=0;j<3;j++){
-            
+        document.write("<hr>")
+        //class activity on jun 25
+        //Write a program to find factorial of a number using while loop
+        let fact=1,n;
+        i=1;
+        n=7
+        while (i<=n) {
+            fact=fact*i;
+            i++;
+        }
+        document.write(`factorial of ${n} is ${fact}`,"<br>")
+        document.write("<hr>")
+        //Write a program to sum of elements in an array using while loop
+        let sum3=0;
+        let arrx=[1,2,3,4,5,6,10]
+        i=0;
+        let k=arrx.length;
+        while(i<k){
+            sum3=sum3+arrx[i];
+            i++;
+        }
+        document.write(`sum of the array is ${sum3}`,"<br>")
+        document.write("<hr>")
+        //Wrie a program to print multiplication table of a number using while loop
+        let mul;
+        i=1;
+        while(i<11){
+            mul=i*5;
+            document.write(`${i}  * 5 = ${mul}`,"<br>");
+            i++;
+        }
+        document.write("<hr>")
+        //Write a program to add two matrix
+        let m1=[[1,2,3],[4,5,6],[7,8,9]],m2=[[2,3,4],[5,6,7],[8,9,10]],m3=[[]];
+        if ((m1.length==m2.length)&&(m1[0].length==m2[0].length)){
+            for(i=0;i<3;i++){
+                for (j=0;j<3;j++){
+                    m3[i]=[j]  
+                }
+            }
+            for (i=0;i<3;i++){
+                document.write("<br>")
+                for (j=0;j<3;j++){
+                    m3[i][j]=m1[i][j] + m2[i][j];
+                    document.write(m3[i][j],"&nbsp")
+                }
             }
         }
+        document.write("<hr>")
     </script>
 </body>
 </html>
