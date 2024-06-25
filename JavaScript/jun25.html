@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let a=768,rev=0;
+        while (a!=0) {
+            rev=(rev*10)+(a%10);
+            a=a-(a%10)
+            a=a/10
+        }
+        document.write("reversed number: ",rev,"<br>")
+        let arr=[2,3,4,5],sum=0,i=0;
+        while (i<arr.length) {
+            sum=sum+arr[i]
+            i++
+        }
+        document.write("sum of the elements of the array: ",sum,"<br>")
+        i=7
+        do
+        {
+            document.write(i,"<br>")
+            i++;
+        }
+        while (i<6) ;
+        document.write("<hr>")  
+        let b=[[1,2,3],[4,5,6],[7,8,9]]
+        for (i=0;i<3;i++){
+            document.write("<br>")
+            for (j=0;j<3;j++){
+                document.write(b[i][j])
+            }
+        }
+        document.write("<hr>")  
+        let c=[[1,1,1],[2,2,2],[3,3,3]]
+        for (i=0;i<3;i++){
+            document.write("<br>")
+            for (j=0;j<3;j++){
+                //c[i][j]=i+1
+                document.write(c[i][j])
+            }
+        }
+        document.write("<hr>")  
+        let d=[[]]
+        //let d=[[],[],[]]
+        for(i=0;i<3;i++){
+            for (j=0;j<3;j++){
+              d[i]=[j]  
+            }
+        }
+        for (i=0;i<3;i++){
+            document.write("<br>")
+            for (j=0;j<3;j++){
+                d[i][j]=b[i][j] + c[i][j];
+                document.write(d[i][j])
+            }
+        }
+        document.write("<hr>")       
+        if ((b.length==c.length)&&(b[0].length==c[0].length)){
+            for(i=0;i<3;i++){
+                for (j=0;j<3;j++){
+                    d[i]=[j]  
+                }
+            }
+            for (i=0;i<3;i++){
+                document.write("<br>")
+                for (j=0;j<3;j++){
+                    d[i][j]=b[i][j] + c[i][j];
+                    document.write(d[i][j])
+                }
+            }
+        }
+        document.write("<hr>")
+        let sum1=0;  
+        let e=[["Anju",90,"fair"],["sumi",88,"good"],["achu",70,"average"],["unni",30,"failed"]]
+        for (i=0;i<e.length;i++){
+            j=1;
+            sum1=sum1+e[i][j];  
+        }
+        document.write("average marks= ",sum1/4),"<br>"
+        document.write("<hr>")
+        a=[5,67,5,45,6,7];
+        for (let x of a) {
+            document.write(x)  ;  
+        }
+        for(i=0;i<3;i++){
+            for (j=0;j<3;j++){
+              f[i][j]= 
+            }
+        }
+    </script>
+</body>
+</html>
