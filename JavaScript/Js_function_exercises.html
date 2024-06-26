@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Function Exercises</title>
+</head>
+<body>
+    <script>
+        //Define a function named sayGoodbye that takes a parameter name and logs Goodbye, [name] to the console. Call the function with your name.
+
+        function sayGoodbye(name) {
+            console.log('Goodbye,'+ name);        
+        }
+        sayGoodbye('Unnikrishnan')
+
+        //Define a function named modulus that takes two parameters and returns their modulus results. Call the function with two numbers and log the result.
+
+        function modulus(a,b) {
+            return console.log("modulus is ",a%b)
+        }
+        modulus(9,4)
+
+        //Define a function named introduce that takes no parameters but uses this to log Hello, my name is [name].
+
+        let person={
+            name:'Unni',
+            age:27
+        };
+        function introduce() {
+            console.log("Hello, my name is "+this.name)
+        }
+        //Use call to invoke introduce with an object having a name property.
+
+        introduce.call(person)
+        //Use apply to invoke introduce with another object.
+        function introduce(a) {
+            console.log("Hello, my name is "+this.name+". Iam "+a)
+        }
+        introduce.apply(person,[27])
+        //Use bind to create a new function with a different object and call it.
+
+        
+    </script>
+</body>
+</html>
