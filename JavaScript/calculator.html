@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <form id="id1"></form>
+    <label for="firstNum">First Number:</label>
+    <input type="number" id="firstNum"name="FN">
+    <label for="SecNum">Second Number:</label>
+    <input type="number" id="SecNum"name="SN">
+    <button type="button" onclick="add()">Addition</button>
+    <button type="button" onclick="sub()">Substraction</button>
+    <button type="button" onclick="mul()">Multiplication</button>
+    <button type="button" onclick="div()">Division</button>
+    <button type="button" onclick="mod()">Modulo</button>
+    <button type="button" onclick="exp()">Exponent</button>
+    </form>
+    <p id="id2"></p>
+    <script>
+        let num1,num2,rslt,r;
+        function displayMessage() {
+            const num1=document.getElementById("firstNum").value;
+            const num2=document.getElementById("SecNum").value;
+
+        }
+        function add() {
+            num1=parseFloat(document.getElementById("firstNum").value)
+            num2=parseFloat(document.getElementById("SecNum").value)
+            document.getElementById("id2").textContent=`Sum of ${num1} and ${num2} is ${num1+num2}`
+            
+
+        }
+        function sub() {
+            num1=parseFloat(document.getElementById("firstNum").value)
+            num2=parseFloat(document.getElementById("SecNum").value)
+            document.getElementById("id2").textContent=`difference between ${num1} and ${num2} is ${num1-num2}`
+        }
+        function mul() {
+            num1=parseFloat(document.getElementById("firstNum").value)
+            num2=parseFloat(document.getElementById("SecNum").value)
+            document.getElementById("id2").textContent=`products of ${num1} and ${num2} is ${num1*num2}`
+        }
+        function div() {
+            num1=document.getElementById("firstNum").value;
+            num2=document.getElementById("SecNum").value;
+            document.getElementById("id2").textContent=`${num1} divided by ${num2} is ${num1/num2}`
+        }
+        function mod() {
+            num1=parseFloat(document.getElementById("firstNum").value)
+            num2=parseFloat(document.getElementById("SecNum").value)
+            document.getElementById("id2").textContent=`reminder of ${num1}/${num2} is ${num1%num2}`
+        }
+        function exp() {
+            num1=parseFloat(document.getElementById("firstNum").value)
+            num2=parseFloat(document.getElementById("SecNum").value)
+            document.getElementById("id2").textContent=`Exponent of ${num1} in ${num2} times is ${num1**num2}`
+        }
+
+    </script>
+</body>
+</html>
