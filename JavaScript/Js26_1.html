@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Objects</title>
+</head>
+<body>
+   <script>
+        let person={
+            name:'Alice',
+            age:25,
+            city:'Tvpm',
+            greet:function () {
+                console.log('Hello '+this.name)
+            }
+        };
+        function greet(greetings) {
+            console.log(greetings+','+this.name);
+        }
+        greet.call(person,"Hello")
+        greet.apply(person,["Hei..,How old are you"])
+        console.log(person.name);
+        console.log(person.age);
+        console.log(person.city);
+        person.greet();
+        function greet(greetings,punctuaion) {
+            console.log(greetings+','+this.name+punctuaion);
+        }
+        greet.apply(person,["Hei","!"])
+
+        function greet() {
+            console.log("Hey Love."+','+this.name);
+        }
+        let greetPerson=greet.bind(person);
+        greetPerson();
+
+
+        function outer() {
+            let outervar='Iam outer';
+            console.log(outervar);
+            function inner() {
+                console.log('Iam Inner');
+                console.log(outervar);
+            }
+            inner()
+        }
+        outer();
+
+        //Arrow function
+        let add=function(a,b){
+            return a+b;
+        };
+        let addArrow = (a,b) => a+b;
+        console.log("Regulr function ",add(2,3));
+        console.log("Arrow function ",addArrow(2,3));
+
+        //This context in Arrow function
+        person={
+            name:'Alice',
+            age:25,
+            city:'Tvpm',
+            greet:function () {
+                setTimeout(() => {
+                    console.log('Hello,'+this.name)
+                }, 10000);
+            }
+        };
+        person.greet();
+   </script> 
+</body>
+</html>
