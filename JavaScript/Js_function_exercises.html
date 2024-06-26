@@ -40,7 +40,40 @@
         introduce.apply(person,[27])
         //Use bind to create a new function with a different object and call it.
 
-        
+        function fun() {
+            console.log("Hey.Its me "+this.name)    
+        }
+        let p1={name:"Yadhu"}
+        let newfun=fun.bind(p1)
+        newfun()
+
+        //Define a function named calculate that takes three parameters: a, b, and a callback function operation. The function should execute the callback function with a and b as arguments and return the result.
+
+        function calculate(a,b,operation) {
+            return operation(a,b);
+        }
+        //Create separate callback functions for addition, subtraction, multiplication, and division.
+        function addition(a,b) {
+            console.log("sum is",a+b);
+        }
+        function subtraction(a,b) {
+            console.log("difference is",a-b);
+        }
+        function multiplication(a,b) {
+            console.log("product is",a*b);
+        }
+        function division(a,b) {
+            console.log("quotient is",a/b);
+        }
+        //Use calculate to perform each of these operations with two numbers and log the results.
+        calculate(2,4,addition)
+        calculate(2,4,subtraction)
+        calculate(2,4,multiplication)
+        calculate(2,4,division)
+
+        //Additionally, use bind to create a new function for calculating the square of a number using the calculate function and log the result.
+
+        let newcalculate=calculate.bind()
     </script>
 </body>
 </html>
