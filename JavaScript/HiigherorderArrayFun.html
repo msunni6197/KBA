@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers=[1,2,3,4,5]
+
+        let doubled=numbers.map(num => num*2);//map function(iterator)
+        console.log(doubled)
+
+        let evens=numbers.filter(num => num%2===0)//filter function(iterator)
+        console.log(evens)
+
+        let sum = numbers.reduce((acc,curr)=> acc+curr,0)//reduce function(iterator)
+        console.log(sum)                     //(parametrs,initial value of 'acc')
+
+        let array = new Array(5).fill(0)
+        let array2d = new Array(5).fill(0).map (() => new Array(5).fill(0));
+        console.log(array)
+        console.log(array2d)
+    </script>
+</body>
+</html>

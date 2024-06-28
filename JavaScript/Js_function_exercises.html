@@ -72,8 +72,11 @@
         calculate(2,4,division)
 
         //Additionally, use bind to create a new function for calculating the square of a number using the calculate function and log the result.
-
+        function square(a) {
+            console.log("square is",a*a);
+        }
         let newcalculate=calculate.bind()
+        newcalculate(2)
     </script>
 </body>
 </html>

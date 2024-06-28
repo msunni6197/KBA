@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Function Exercises 2</title>
+</head>
+<body>
+    <p id="id1"></p>
+    <p id="op"></p>
+    <p id="mp"></p>
+    <button onclick="showAlert()">ShowAlert</button>
+    <script>
+        const car = new Object();
+
+        car.brand = "Ford";
+        car.model = "Mastang";
+        car.getDetails=function() {
+            return `Brand: ${this.brand},Model: ${this.model}`;
+        }
+        document.getElementById("id1").textContent=car.getDetails()
+
+        const person = {
+            firstName: "john",
+            lastName: "Mathew",
+            age: 30,
+            eyeColor:"brown"
+        }
+        document.getElementById("op").textContent=`original person object: ${JSON.stringify(person)}`;//display original content
+
+        const y = person;//create a copy of object"person"
+
+        y.firstName="Ronald"//change name for y,which will change for both
+
+        document.getElementById("mp").textContent=`modified person object: ${JSON.stringify(person)}`;//display modified object
+
+        //check value of 'this' keyword
+        console.log(this);//window object
+
+        function showThis() {//function context
+            console.log(this)
+        }
+        showThis();//window object
+        //object method context
+        let p1 = {
+            firstName: "john",
+            lastName: "Mathew",
+            age: 30,
+            eyeColor:"brown",
+            greet:function() {
+                console.log('Hello,'+this.firstName);
+            }
+            
+        }
+
+        p1.greet();//Hello john,'this' means object name
+
+        let arrowGreet= () => {
+            console.log('Arrow function this: ',this);
+        }
+        arrowGreet();//window object
+
+        function showAlert() {
+            window.alert("Hello..there..")
+        }
+        //immediately invoked function expression(IIFE)
+
+        (function () {
+            console.log("IIFE executed suddenly")
+        })();
+
+        
+    </script>
+</body>
+</html>
