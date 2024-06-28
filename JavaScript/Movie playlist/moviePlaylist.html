@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Playlist Manager</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Movie Playlist Manager</h1>
-    <label for=""></label>
+    <label for="movie">Enter a movie:</label>
+    <input type="text" id="movie">
+    <label for="priority">Enter prioroity(1-High,2-Medium,3-Low):</label>
+    <input type="text" id="priority">
+    <button onclick="addMovie()">Add Movie</button>
+    <ul id="movieList"></ul>
+    <script src="movieList.js"></script>
 </body>
 </html>
