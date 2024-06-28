@@ -30,9 +30,9 @@ function addMovie() {
         watchedButton.onclick = function(){
             l.classList.toggle('watched');
         };
-       l.appendChild(watchedButton);
+        l.appendChild(watchedButton);
 
-       const editButton = document.createElement('button');
+        const editButton = document.createElement('button');
         editButton.textContent = 'Edit';
         editButton.onclick = function(){
         const newMovie = prompt('Edit Movie: ',movie);
