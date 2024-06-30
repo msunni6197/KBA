@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3</title>
+</head>
+<body>
+    <label for="id1">First Number:</label>
+    <input type="number" id="id1">
+    <label for="id2">Second Number:</label>
+    <input type="number" id="id2">
+    <button onclick="compare()">Compare</button>
+    <p id="id3"></p>
+    <script>
+        function compare() {
+            let num1 =Number( document.getElementById("id1").value)
+            let num2 =Number( document.getElementById("id2").value)
+            if (num1>num2) {
+                document.getElementById("id3").textContent=`${num1} is greater than ${num2}`
+            } else if (num1<num2) {
+                document.getElementById("id3").textContent=`${num1} is less than ${num2}`
+            } else {
+                document.getElementById("id3").textContent=`Both numbers are same`
+            }
+        }
+    </script>
+</body>
+</html>
