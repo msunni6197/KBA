@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Manager Application</title>
+    <style>
+        ul { list-style-type: none; }
+        li { margin: 5px 0; }
+        .completed{text-decoration: line-through;color: gray;}
+        .difficulty-easy{ color: green;}
+        .difficulty-moderate{ color: orange;}
+        .difficulty-hard{ color:red;}
+    </style>
+</head>
+<body>
+    <h1>Recipe Manager Application</h1>
+    <label for="recipeInput">Recipe Title:</label>
+    <input type="text" id="recipeInput">
+    <label for="difficultyInput">Difficulty level (1-Easy, 2-Moderate, 3-Hard)</label>
+    <input type="text" id="difficultyInput">
+    <button onclick="addRecipe()">Add Recipe</button>
+    <ul id="id1"></ul>
+    <script src="recipe.js"></script>
+</body>
+</html>
