@@ -45,31 +45,6 @@ function addMovie() {
         };
         l.appendChild(editButton);
 
-        const editPriority = document.createElement("button")
-        editPriority.textContent='Edit_Priority';
-        editPriority.onclick = function() {
-        const newpriority = prompt('Edit Priority',priority);
-        if(!isNaN(newpriority) && newpriority>=1 && newpriority <=3){
-            const priorityIndex = priorities.indexOf(priority);
-            priorities[priorityIndex] = newpriority;
-            l.firstChild.textContent = newpriority;
-            priority = newpriority;
-
-            switch(priority){
-                case 1: 
-                    l.classList.add('priority-high');
-                    break;
-                case 2:
-                    l.classList.add('priority-medium');
-                    break;
-                case 3:
-                    l.classList.add('priority-low');
-                    break;
-            }
-        }
-        }
-        l.appendChild(editPriority)
-
         const removeButton = document.createElement('button');
         removeButton.textContent = 'Remove';
         removeButton.onclick = function(){
