@@ -1,33 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Expense Tracker Application</title>
-    <style>
-        .category-food{
-            color: green;
-        }
-        .category-transport{
-            color: blue;
-        }
-        .category-entertainment{
-            color: purple;
-        }
-        .completed{
-            text-decoration: line-through gray;
-        }
-    </style>
-</head>
-<body>
-    <label for="descriptionInput">Expense Description:</label>
-    <input type="text" id="descriptionInput">
-    <label for="amountInput">Amount:</label>
-    <input type="text" id="amountInput">
-    <label for="categoryInput"> category (1-Food, 2-Transport, 3-Entertainment)</label>
-    <input type="text" id="categoryInput">
-    <button onclick="addExpense()">Add Expense</button>
-    <ul id="id1"></ul>
+    <link rel="stylesheet" href="addExpense.css">
+  </head>
+  <body>
+    <h1>Expense Tracker Application</h1>
+
+    <label for="description">Enter Expense Description :</label>
+    <input type="text" name="" id="description" /><br /><br />
+    <label for="amount">Enter Expense Amount :</label>
+    <input type="text" name="" id="amount" /><br /><br />
+    <label for="category"
+      >Enter Expense Category (1-Food , 2-Transport , 3-Entertainment):</label
+    >
+    <input type="text" name="" id="category" /><br /><br />
+    <button onclick="addexpense()">Add Expense</button>
+    <ul id="expenselist"></ul>
+
     <script src="addExpense.js"></script>
-</body>
+  </body>
 </html>

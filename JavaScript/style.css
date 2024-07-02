@@ -1,0 +1,23 @@
+body {
+    font-family: Arial,sans-serif;
+};
+
+#itemList {
+    list-style-type: none;
+    padding: 0;
+}
+#itemList li {
+    padding: 8px;   
+    background-color: bisque;
+    margin: 5px 0; 
+    display: flex;
+    justify-content: space-between;
+}
+#addItemForm {
+    margin-bottom: 20px 0;
+
+}
+.controls {
+    display: flex;
+    gap: 10px;
+}
