@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submit Event with Map</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" id="key" placeholder="key">
+        <input type="text" id="value" placeholder="value">
+        <button type="submit">Submit</button>
+    </form>
+    <div id="formOutput"></div>
+    <script>
+        const formMap = new Map();
+        document.getElementById("myForm").onsubmit = function (event) {
+            event.preventDefault();
+            const key = document.getElementById('key').value;
+            const value = document.getElementById('value').value;
+            formMap.set(key,value);
+            document.getElementById('formOutput').innerText= JSON.stringify([...formMap])
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnClick Event with Map</title>
+</head>
+<body>
+    <button id="addButton">Add Items</button>
+    <div id="output"></div>
+    <script>
+        const map=new Map();
+        document.getElementById("addButton").onclick = function (params) {
+            const key = prompt('Enter Key:');
+            const value = prompt('Enter value:');
+            map.set(key,value);
+            document.getElementById('output').innerText = JSON.stringify([...map])
+
+            
+        }
+    </script>
+</body>
+</html>
