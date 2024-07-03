@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candy Operations</title>
+    <script>
+        // Function to perform candy operations
+        function performCandyOperations() {
+            // Initial list of candies
+            let candies = ['KitKat', 'Snickers', 'Reese\'s', 'M&M\'s', 'Twix'];
+
+            // Display initial candies
+            document.getElementById('initialCandies').textContent = `Initial list of candies: ${candies.join(', ')}`;
+
+            // Print most favorite candy
+            document.getElementById('favoriteCandy').textContent = `My most favorite candy: ${candies[0]}`;
+
+            // Add one more candy to the list using push method
+            candies.push('Skittles');
+            document.getElementById('afterAddition').textContent = `Candies after adding Skittles: ${candies.join(', ')}`;
+
+            // Pop one element from the list
+            let poppedCandy = candies.pop();
+            document.getElementById('afterPop').textContent = `Popped candy: ${poppedCandy}, Candies after popping one: ${candies.join(', ')}`;
+
+            // Delete the least interested candy from list using delete method
+            delete candies[2];
+            document.getElementById('afterDelete').textContent = `Candies after deleting Reese\'s: ${candies.join(', ')}`;
+
+            // Remove first element from the list using shift method
+            let removedFirst = candies.shift();
+            document.getElementById('afterShift').textContent = `Removed first candy: ${removedFirst}, Candies after shifting: ${candies.join(', ')}`;
+
+            // Make a different array from 3rd position to 6th position using slice method
+            let subArray = candies.slice(2, 6);
+            document.getElementById('subArray').textContent = `Subarray from 3rd to 6th position: ${subArray.join(', ')}`;
+
+            // Search whether "Galaxy" is on your list using includes method
+            let includesGalaxy = candies.includes('Galaxy');
+            document.getElementById('searchResult').textContent = `Does the list include "Galaxy"? ${includesGalaxy}`;
+
+            // Sort the array in alphabetical order using sort method
+            candies.sort();
+            document.getElementById('afterSort').textContent = `Candies sorted alphabetically: ${candies.join(', ')}`;
+
+            // Reverse the array using reverse method
+            candies.reverse();
+            document.getElementById('afterReverse').textContent = `Candies reversed: ${candies.join(', ')}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Candy Operations</h1>
+    <button onclick="performCandyOperations()">Perform Candy Operations</button>
+
+    <h2>Results:</h2>
+    <p id="initialCandies"></p>
+    <p id="favoriteCandy"></p>
+    <p id="afterAddition"></p>
+    <p id="afterPop"></p>
+    <p id="afterDelete"></p>
+    <p id="afterShift"></p>
+    <p id="subArray"></p>
+    <p id="searchResult"></p>
+    <p id="afterSort"></p>
+    <p id="afterReverse"></p>
+</body>
+</html>
