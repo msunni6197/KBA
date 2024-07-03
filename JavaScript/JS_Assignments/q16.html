@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lowercase String Converter</title>
+    <script>
+        function convertToLowercase() {
+            const inputString = document.getElementById('stringInput').value;
+            const lowercaseString = inputString.toLowerCase();
+            document.getElementById('lowercaseOutput').textContent = `Lowercase String: ${lowercaseString}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Lowercase String Converter</h1>
+    <input type="text" id="stringInput" placeholder="Enter a string">
+    <button onclick="convertToLowercase()">LOWERCASE</button>
+    <p id="lowercaseOutput"></p>
+</body>
+</html>
