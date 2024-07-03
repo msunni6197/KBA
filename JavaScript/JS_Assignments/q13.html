@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dare Selector</title>
+    <script>
+        // List of dares
+        const dares = [
+            "Sing a song loudly.",
+            "Do 20 push-ups.",
+            "Eat a spoonful of mustard.",
+            "Imitate your favorite celebrity.",
+            "Dance without music for 1 minute.",
+            "Speak in an accent for the next 3 rounds.",
+            "Let someone tickle you for 30 seconds.",
+            "Act like a monkey until your next turn.",
+            "Do your best impression of a baby being born.",
+            "Talk in a high-pitched voice until your next turn."
+        ];
+        function populateDropdown() {
+            const dropdown = document.getElementById('dareDropdown');
+            dropdown.innerHTML = '';
+            for (let i = 0; i < dares.length; i++) {
+                const option = document.createElement('option');
+                option.value = i;
+                option.text = i+1;
+                dropdown.add(option);
+            }
+        }
+        function showDare() {
+            const index = document.getElementById('dareDropdown').value;
+            const dareOutput = document.getElementById('dareOutput');
+            dareOutput.textContent = `Your Dare: ${dares[index]}`;
+        }
+        window.onload = populateDropdown;
+    </script>
+</head>
+<body>
+    <h1>Dare Selector</h1>
+    <select id="dareDropdown">
+        <option>Select an index</option>
+    </select>
+    <button onclick="showDare()">Show Dare</button>
+    <p id="dareOutput"></p>
+</body>
+</html>
