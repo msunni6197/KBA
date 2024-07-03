@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Grades</title>
+</head>
+<body>
+    <h2>Search for a Student</h2>
+    <input type="text" id="studentName" placeholder="Enter student name">
+    <button onclick="searchStudent()">Search</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        const students = {
+            "David": 80,
+            "Vinoth": 77,
+            "Divya": 88,
+            "Ishitha": 95,
+            "Thomas": 68
+        };
+
+        function getGrade(mark) {
+            if (mark >= 90) {
+                return 'A';
+            } else if (mark >= 80) {
+                return 'B';
+            } else if (mark >= 70) {
+                return 'C';
+            } else if (mark >= 60) {
+                return 'D';
+            } else {
+                return 'F';
+            }
+        }
+
+        function searchStudent() {
+            const name = document.getElementById('studentName').value;
+            const mark = students[name];
+            const result = document.getElementById('result');
+
+            if (mark !== undefined) {
+                const grade = getGrade(mark);
+                result.innerText = `Student: ${name}, Marks: ${mark}, Grade: ${grade}`;
+            } else {
+                result.innerText = `Student ${name} not found.`;
+            }
+        }
+    </script>
+
+</body>
+</html>
