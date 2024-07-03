@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+    <font color="white" size="5px" align="center">
+    <center>
+    <table cellspacing="10" style="width:300px;height:300px;border-radius:10px;background-color:#4F4F4F">
+        <tr>
+            <td id="display" bgcolor="#D0E6A8" colspan="4" style="border-radius:10px;height:60px;color:black;font-size:55px" align="right">0</td>
+        </tr>
+        <tr>
+            <td><input type="button" value=7 style="width:60px;height:60px;background-color:#828282;font-size:50px;color:white" onclick="appendNumber(7)"></td>
+            <td><input type="button" value=8 style="width:60px;height:60px;background-color:#828282;font-size:50px;color:white" onclick="appendNumber(8)"></td>
+            <td><input type="button" value=9 style="width:60px;height:60px;background-color:#828282;font-size:50px;color:white" onclick="appendNumber(9)"></td>
+            <td><input type="button" value=&#247; style="width:60px;height:60px;background-color:#63CADB;font-size:50px;color:white" onclick="chooseOperation('÷')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value=4 style="width:60px;height:60px;background-color:#828282;font-size:50px;color:white" onclick="appendNumber(4)"></td>
+            <td><input type="button" value=5 style="width:60px;height:60px;background-color:#828282;font-size:50px;color:white" onclick="appendNumber(5)"></td>
+            <td><input type="button" value=6 style="width:60px;height:60px;background-color:#828282;font-size:50px;color:white" onclick="appendNumber(6)"></td>
+            <td><input type="button" value=X style="width:60px;height:60px;background-color:#63CADB;font-size:50px;color:white" onclick="chooseOperation('*')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value=1 style="width:60px;height:60px;background-color:#828282;font-size:50px;color:white" onclick="appendNumber(1)"></td>
+            <td><input type="button" value=2 style="width:60px;height:60px;background-color:#828282;font-size:50px;color:white" onclick="appendNumber(2)"></td>
+            <td><input type="button" value=3 style="width:60px;height:60px;background-color:#828282;font-size:50px;color:white" onclick="appendNumber(3)"></td>
+            <td><input type="button" value=- style="width:60px;height:60px;background-color:#63CADB;font-size:50px;color:white" onclick="chooseOperation('-')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value=0 style="width:60px;height:60px;background-color:#828282;font-size:50px;color:white" onclick="appendNumber(0)"></td>
+            <td><input type="button" value=. style="width:60px;height:60px;background-color:#828282;font-size:50px;color:white" onclick="appendNumber('.')"></td>
+            <td><input type="button" value== style="width:60px;height:60px;background-color:#E6625D;font-size:50px;color:white" onclick="compute()"></td>
+            <td><input type="button" value=+ style="width:60px;height:60px;background-color:#63CADB;font-size:50px;color:white" onclick="chooseOperation('+')"></td>
+        </tr>
+    </table>
+    </center>
+
+    <script>
+        let display = document.getElementById('display');
+        let currentOperand = '';
+        let previousOperand = '';
+        let operation = '';
+
+        function appendNumber(number) {
+            if (number === '.' && currentOperand.includes('.')) return;
+            currentOperand += number;
+            updateDisplay(currentOperand);
+        }
+
+        function chooseOperation(op) {
+            if (currentOperand === '') return;
+            if (previousOperand !== '') {
+                compute();
+            }
+            operation = op;
+            previousOperand = currentOperand;
+            currentOperand = '';
+        }
+
+        function compute() {
+            let result;
+            const prev = parseFloat(previousOperand);
+            const current = parseFloat(currentOperand);
+            if (isNaN(prev) || isNaN(current)) return;
+            switch (operation) {
+                case '+':
+                    result = prev + current;
+                    break;
+                case '-':
+                    result = prev - current;
+                    break;
+                case '*':
+                    result = prev * current;
+                    break;
+                case '÷':
+                    result = prev / current;
+                    break;
+                default:
+                    return;
+            }
+            currentOperand = result.toString();
+            operation = '';
+            previousOperand = '';
+            updateDisplay(currentOperand);
+        }
+
+        function updateDisplay(number) {
+            display.innerText = number;
+        }
+    </script>
+</body>
+</html>
