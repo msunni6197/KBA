@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Selector</title>
+    <script>
+        let fruits = [];
+
+        function addFruit() {
+            const fruitInput = document.getElementById('fruitInput').value;
+            fruits = fruitInput.split(',');
+            populateDropdown();
+        }
+
+        function populateDropdown() {
+            const dropdown = document.getElementById('fruitDropdown');
+            dropdown.innerHTML = '';
+            for (let i = 0; i < fruits.length; i++) {
+                const option = document.createElement('option');
+                option.value = i;
+                option.text = i;
+                dropdown.add(option);
+            }
+        }
+
+        function showFruit() {
+            const index = document.getElementById('fruitDropdown').value;
+            const fruitOutput = document.getElementById('fruitOutput');
+            fruitOutput.textContent = `Selected Fruit: ${fruits[index]}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Fruit Selector</h1>
+    <input type="text" id="fruitInput" placeholder="Enter fruits separated by commas">
+    <button onclick="addFruit()">Add Fruits</button>
+    <br><br>
+    <select id="fruitDropdown" onchange="showFruit()">
+        <option>Select an index</option>
+    </select>
+    <p id="fruitOutput"></p>
+</body>
+</html>
