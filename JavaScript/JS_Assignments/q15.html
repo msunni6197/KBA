@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uppercase String Converter</title>
+    <script>
+        function convertToUppercase() {
+            const inputString = document.getElementById('stringInput').value;
+            const uppercaseString = inputString.toUpperCase();
+            document.getElementById('uppercaseOutput').textContent = `Uppercase String: ${uppercaseString}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Uppercase String Converter</h1>
+    <input type="text" id="stringInput" placeholder="Enter a string">
+    <button onclick="convertToUppercase()">UPPERCASE</button>
+    <p id="uppercaseOutput"></p>
+</body>
+</html>
