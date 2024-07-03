@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Accommodation</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <!-- Navbar -->
+  <nav class="bg-white shadow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex">
+          <div class="flex-shrink-0">
+            <a href="#" class="text-xl font-bold">TravelSite</a>
+          </div>
+          <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+            <a href="#" class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">Home</a>
+            <a href="#" class="text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium">About</a>
+            <a href="#" class="text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium">Contact</a>
+          </div>
+        </div>
+        <div class="hidden sm:ml-6 sm:flex sm:items-center">
+          <button class="bg-gray-800 text-white px-3 py-2 rounded-md text-sm font-medium">Sign In</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Search Bar -->
+  <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+    <div class="bg-white shadow overflow-hidden sm:rounded-lg p-4">
+      <form class="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
+        <div class="flex-grow">
+          <label for="destination" class="block text-sm font-medium text-gray-700">Destination</label>
+          <input type="text" id="destination" name="destination" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        </div>
+        <div>
+          <label for="checkin" class="block text-sm font-medium text-gray-700">Check-in</label>
+          <input type="date" id="checkin" name="checkin" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        </div>
+        <div>
+          <label for="checkout" class="block text-sm font-medium text-gray-700">Check-out</label>
+          <input type="date" id="checkout" name="checkout" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        </div>
+        <div>
+          <label for="guests" class="block text-sm font-medium text-gray-700">Guests</label>
+          <input type="number" id="guests" name="guests" min="1" value="1" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        </div>
+        <div class="flex items-end">
+          <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-md">Search</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Filters -->
+  <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+    <div class="bg-white shadow overflow-hidden sm:rounded-lg p-4">
+      <h3 class="text-lg leading-6 font-medium text-gray-900">Filters</h3>
+      <form class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+        <div>
+          <label for="price" class="block text-sm font-medium text-gray-700">Price Range</label>
+          <input type="range" id="price" name="price" min="0" max="1000" class="mt-1 block w-full">
+        </div>
+        <div>
+          <label for="property-type" class="block text-sm font-medium text-gray-700">Property Type</label>
+          <select id="property-type" name="property-type" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            <option>Hotel</option>
+            <option>Hostel</option>
+            <option>Apartment</option>
+            <option>B&B</option>
+          </select>
+        </div>
+        <div>
+          <label for="amenities" class="block text-sm font-medium text-gray-700">Amenities</label>
+          <select id="amenities" name="amenities" multiple class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            <option>Wi-Fi</option>
+            <option>Breakfast</option>
+            <option>Pool</option>
+            <option>Gym</option>
+          </select>
+        </div>
+        <div>
+          <label for="rating" class="block text-sm font-medium text-gray-700">Guest Rating</label>
+          <input type="number" id="rating" name="rating" min="1" max="5" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        </div>
+        <div>
+          <label for="distance" class="block text-sm font-medium text-gray-700">Distance from Center</label>
+          <input type="range" id="distance" name="distance" min="0" max="50" class="mt-1 block w-full">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Property Listings -->
+  <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+    <div class="bg-white shadow overflow-hidden sm:rounded-lg p-4">
+      <h3 class="text-lg leading-6 font-medium text-gray-900">Available Properties</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+        <!-- Example Property -->
+        <div class="bg-white p-4 shadow rounded-lg">
+          <img src="https://via.placeholder.com/300" alt="Property Image" class="w-full h-48 object-cover rounded-lg">
+          <h4 class="text-lg font-bold mt-2">Hotel Example</h4>
+          <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="text-gray-800 font-bold mt-2">$120/night</p>
+          <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-md">Book Now</button>
+        </div>
+        <!-- More properties can be added here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 mt-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between">
+        <p>&copy; 2024 TravelSite. All rights reserved.</p>
+        <div class="flex space-x-4">
+          <a href="#" class="hover:text-gray-400">Privacy Policy</a>
+          <a href="#" class="hover:text-gray-400">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
