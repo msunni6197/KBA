@@ -3,23 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q4</title>
+    <title>Document</title>
 </head>
 <body>
-    <label for="name">Name:</label>
+    <script src="q4.js"></script>
+    <label for="name">NAME:</label>
     <input type="text" id="name">
-    <button onclick="">Submit</button>
-    <select name="none" id="id1" onclick=""></select>
-    <script>
-        names=[]
-        rollnumbers=[]
-        function insertName() {
-            let name = document.getElementById("name").value;
-            if (name!==''&&name==NaN) {
-                names.push(name);
-                
-            }
-        }
-    </script>
+    <button onclick="nameEntry()">Submit</button><br>
+    <label for="roll">Roll number:</label>
+    <select id="roll"></select>
+    <button onclick="nameDisplay()">Display</button>
 </body>
 </html>
