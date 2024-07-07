@@ -32,31 +32,10 @@ function load() {
       choice.appendChild(label);
     });
   } 
-
-  function onSubmission() {
-    const options = document.getElementsByName('option');
-    let selectedOption;
-
-    for (let i = 0; i < options.length; i++) {
-        if (options[i].checked) {
-            selectedOption = options[i].value;
-            break;
-        }
-    }
-
-    if (selectedOption) {
-        if (selectedOption === Data[index].ans) { 
-            document.getElementById('result').textContent = "Correct!";
-            sum++; 
-        } else {
-            document.getElementById('result').textContent = "Wrong! The correct answer is " + Data[index].ans;
-        }
-        index++; 
-        load(); 
-    } else {
-        document.getElementById('result').textContent = "Please select an option!";
-    }
+function onSubmission() {
+    
 }
+
 
 load();
 // console.log(Data[0].options[0])

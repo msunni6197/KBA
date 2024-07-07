@@ -10,7 +10,7 @@ const inventory = new Map();
 function askCommand(){
     console.log("Welcome to the Inventory Management CLI!");
     console.log("Available commands: add ,remove, search, update, summary, exit");
-    rl.question("\Enter a Command: ", function(command){
+    rl.question("Enter a Command: ", function(command){
         switch(command.trim().toLowerCase()){
             case 'add':
                 addItemPrompt();
@@ -44,7 +44,7 @@ function addItemPrompt(){
     rl.question("Enter item id: ", function(id){
         rl.question("Enter item name: ", function(name){
             rl.question("Enter item category: ", function(category){
-                rl.question("Enter item quantity", function(quantity){
+                rl.question("Enter item quantity: ", function(quantity){
                     addItem(id,name,category,parseInt(quantity));
                     askCommand();
                 });
@@ -112,7 +112,7 @@ function updateItemPrompt(){
     rl.question("Enter item id: ", function(id){
         rl.question("Enter item name: ", function(name){
             rl.question("Enter item category: ", function(category){
-                rl.question("Enter item quantity", function(quantity){
+                rl.question("Enter item quantity:", function(quantity){
                     updateItem(id, newName, newCategory, newQuantity ? parseInt(newQuantity) : undefined);
                     askCommand();
                 });
